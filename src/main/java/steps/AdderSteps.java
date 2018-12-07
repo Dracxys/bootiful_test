@@ -1,10 +1,14 @@
 package steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 import service.AdderService;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 @ContextConfiguration(classes = AdderService.class)
-public class AdderServiceSteps {
+public class AdderSteps {
     @Autowired
     private AdderService adderService;
     private int givenNumber;
