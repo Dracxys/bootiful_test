@@ -15,3 +15,8 @@ script:
 
 after_deploy:
 - echo "done deploying"
+
+sudo: required
+
+services:
+- docker

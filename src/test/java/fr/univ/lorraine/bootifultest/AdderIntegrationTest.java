@@ -1,22 +1,20 @@
-package test;
+package fr.univ.lorraine.bootifultest;
 
-import controller.AdderController;
+import fr.univ.lorraine.bootifultest.controller.OpController;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import net.serenitybdd.jbehave.SerenityStory;
 import org.jbehave.core.annotations.BeforeStory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import service.AdderService;
 
 @ContextConfiguration(classes = {
-        AdderController.class, AdderService.class })
+        OpController.class, fr.univ.lorraine.bootifultest.service.AdderService.class})
 public class AdderIntegrationTest extends SerenityStory {
-
     @Autowired
-    private AdderService adderService;
+    private fr.univ.lorraine.bootifultest.service.AdderService adderService;
 
     @BeforeStory
     public void init() {
-        RestAssuredMockMvc.standaloneSetup(new AdderController(adderService));
+        RestAssuredMockMvc.standaloneSetup(new OpController(adderService));
     }
 }
