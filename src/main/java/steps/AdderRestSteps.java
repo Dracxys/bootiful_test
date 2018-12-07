@@ -1,8 +1,12 @@
 package steps;
 
+import io.restassured.module.mockmvc.response.MockMvcResponse;
 import net.thucydides.core.annotations.Step;
 
 import java.io.UnsupportedEncodingException;
+
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class AdderRestSteps {
 
