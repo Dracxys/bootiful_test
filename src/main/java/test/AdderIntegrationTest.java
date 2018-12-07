@@ -1,6 +1,9 @@
 package test;
 
 import controller.AdderController;
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
+import net.serenitybdd.jbehave.SerenityStory;
+import org.jbehave.core.annotations.BeforeStory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import service.AdderService;
