@@ -17,7 +17,7 @@ public class AdderSpringSerenityRunnerIntegrationTest {
     @Value("#{props['adder']}") private int adder;
     @Test
     public void givenNumber_whenAdd_thenSummedUp() {
-        adderSteps.givenBaseAndAdder(adder);
+        adderSteps.givenBaseAndAdder(0,adder);
         adderSteps.whenAdd();
         adderSteps.summedUp();
     }
