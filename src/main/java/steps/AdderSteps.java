@@ -14,6 +14,7 @@ public class AdderSteps {
     private int givenNumber;
     private int base;
     private int sum;
+
     public void givenBaseAndAdder(int base, int adder) {
         this.base = base;
         adderService.baseNum(base);

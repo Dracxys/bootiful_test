@@ -1,6 +1,7 @@
 package test;
 
 import net.serenitybdd.junit.spring.integration.SpringIntegrationSerenityRunner;
+import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,12 +12,13 @@ import steps.AdderSteps;
 @ContextConfiguration(locations = "classpath:adder-beans.xml")
 public class AdderSpringSerenityRunnerIntegrationTest {
 
-    @Steps private AdderSteps adderSteps;
+    @Steps
+    private AdderSteps adderSteps;
     @Value("#{props['adder']}") private int adder;
     @Test
     public void givenNumber_whenAdd_thenSummedUp() {
-        adderSteps.givenNumber();
-        adderSteps.whenAdd(adder);
-        adderSteps.thenSummedUp();
+        adderSteps.givenBaseAndAdder(adder);
+        adderSteps.whenAdd();
+        adderSteps.summedUp();
     }
 }
