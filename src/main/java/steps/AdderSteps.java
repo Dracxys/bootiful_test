@@ -20,6 +20,11 @@ public class AdderSteps {
         adderService.baseNum(base);
         this.givenNumber = adder;
     }
+    public void givenNumber(int adder) {
+        this.base = 0;
+        adderService.baseNum(base);
+        this.givenNumber = adder;
+    }
     public void whenAdd() {
         sum = adderService.add(givenNumber);
     }

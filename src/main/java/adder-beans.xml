@@ -1,0 +1,3 @@
+<util:properties id="props" xmlns:util="http://www.springframework.org/schema/util">
+    <prop key="adder">4</prop>
+</util:properties>

@@ -11,8 +11,10 @@ import service.AdderService;
 @ContextConfiguration(classes = {
         AdderController.class, AdderService.class })
 public class AdderIntegrationTest extends SerenityStory {
+
     @Autowired
     private AdderService adderService;
+
     @BeforeStory
     public void init() {
         RestAssuredMockMvc.standaloneSetup(new AdderController(adderService));
