@@ -10,7 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 @RunWith(SpringIntegrationSerenityRunner.class)
 @ContextConfiguration(locations = "classpath:adder-beans.xml")
-public class AdderSpringSerenityRunnerIntegrationTest {
+public class AdderSpringSerenityRunnerIntegrationIT {
 
     @Steps
     private AdderServiceSteps adderSteps;
