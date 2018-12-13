@@ -9,7 +9,7 @@ addons:
   sonarcloud:
     organization: "lucasschnabel-github"
     token:
-      secure: $SONAR_TOKEN
+      secure: 164920fc954750763b8880416e6e21db26be17fe
 
 script:
 - ./mvnw clean install -B
