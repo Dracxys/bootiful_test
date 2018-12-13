@@ -13,7 +13,7 @@ addons:
 
 script:
 - ./mvnw clean install -B
-- sonar-scanner 
+- sonar:sonar
 
 
 
