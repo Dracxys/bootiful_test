@@ -21,13 +21,13 @@ public class OpController {
 
     @PostMapping("/add/current")
     @CrossOrigin(origins = "http://localhost:4200")
-    public int add(@RequestParam int num){
+    public int add(@RequestBody int num){
         return this.service.add(num);
     }
 
     @PostMapping("/accumulate/current")
     @CrossOrigin(origins = "http://localhost:4200")
-    public int accumulate(@RequestParam int num){
+    public int accumulate(@RequestBody int num){
         return this.service.accumulate(num);
     }
 }
